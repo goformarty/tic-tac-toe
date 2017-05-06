@@ -13,33 +13,40 @@ function State(oldState) {
     this.board = [];
 
     // if the state is constructed using a copy of old state
-     if(typeof oldState !== "undefined") {
-        var oldLength = old.board.length;
-        this.board = new Array(oldLength);
+    if(typeof oldState !== "undefined") {
+    	var oldLength = old.board.length;
+    	this.board = new Array(oldLength);
 
-        for(var i = 0; i < oldLength; i++) {
-            this.board[i] = old.board[i];
-        }
+    	for(var i = 0; i < oldLength; i++) {
+    		this.board[i] = old.board[i];
+    	}
 
-        this.oMovesCount = old.oMovesCount;
-        this.result = old.result;
-        this.turn = old.turn;
+    	this.oMovesCount = old.oMovesCount;
+    	this.result = old.result;
+    	this.turn = old.turn;
     }
 }
 
 State.prototype.advanceTurn = function() {
-	 this.turn = "X" ? "O" : "X";
-	 return this.turn;
+	this.turn = "X" ? "O" : "X";
+	return this.turn;
 };
 
 State.prototype.emptyCells = function() {
 	var indices = [];
-        for(var i = 0; i < 9 ; i++) {
-            if(this.board[i] === "E") {
-                indices.push(i);
-            }
-        }
-        return indices;
+	for(var i = 0; i < 9 ; i++) {
+		if(this.board[i] === "E") {
+			indices.push(i);
+		}
+	}
+	return indices;
 };
 
-State.prototype.emptyCells = function() {};
+State.prototype.isTerminal = function() {
+	return false;
+};
+
+
+
+
+

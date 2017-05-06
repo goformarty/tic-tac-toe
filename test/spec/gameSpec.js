@@ -7,6 +7,7 @@ describe("Game", function() {
 			expect(game.newState.turn).toBe("X");
 			expect(game.newState.advanceTurn()).toBe("O");
 			expect(game.newState.emptyCells()).toEqual([0,1,2,3,4,5,6,7,8]);
+			expect(game.newState.isTerminal()).toBe(false);
 	});
 });
 
