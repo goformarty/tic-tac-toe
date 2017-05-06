@@ -16,7 +16,7 @@ function State(oldState) {
      if(typeof oldState !== "undefined") {
         var oldLength = old.board.length;
         this.board = new Array(oldLength);
-        
+
         for(var i = 0; i < oldLength; i++) {
             this.board[i] = old.board[i];
         }
@@ -27,5 +27,19 @@ function State(oldState) {
     }
 }
 
-State.prototype.advanceTurn = function() {};
+State.prototype.advanceTurn = function() {
+	 this.turn = "X" ? "O" : "X";
+	 return this.turn;
+};
 
+State.prototype.emptyCells = function() {
+	var indices = [];
+        for(var i = 0; i < 9 ; i++) {
+            if(this.board[i] === "E") {
+                indices.push(i);
+            }
+        }
+        return indices;
+};
+
+State.prototype.emptyCells = function() {};
