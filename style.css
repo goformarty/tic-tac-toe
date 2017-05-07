@@ -1,70 +1,30 @@
-html, body {
-    background: #34495e;
-    color: #fff;
-    font-family: Helvetica;
-    font-weight: bold;
-    text-align:center;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.main-container {
-	padding-top: 60px;
-	margin: 0 auto;
-}
-
-h1 {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #f1f1f1
-    
-}
-
-.board {
-    width: 300px;
-    height: 300px;
-    border: 1px solid #dadada;
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.cell {
-	float: left;
-    overflow: hidden;
-	width: 100px;
-    height: 100px;
-    background: #f1f1f1;
-    border: 1px solid #ccc;
-    border-right: 1px solid #fff;
+button {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #000;
     cursor: pointer;
-    text-transform: uppercase;
+    margin: 0px;
+}
+
+tbody {
+    border: 2px solid black;
+}
+
+td {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
     text-align: center;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-	font-size: 40px;
-    color: #3498db;
-    padding-top: 25px;
 }
 
-.cell:hover {
-	background: #f9f9f9;;
-}
-
-#start {
-	text-align: center;
-        border: none;
-        padding: 0.6em 1.2em;
-        background: #f39c12;
-        color: #fff;
-        font-size: 1em;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: inline-block;
-        margin: 3px 2px;
-        border-radius: 2px;
-}
-
-#start:hover {
-	 background: #ffb847;
+.wrapper, table {
+    margin: 20px auto;
 }

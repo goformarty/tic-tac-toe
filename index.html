@@ -6,21 +6,32 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="main-container">
-	<h1>Tic-Tac-Toe</h1>
-		<div class="board">
-			    <div class='cell' data-indx = "0" >X</div>
-                <div class='cell' data-indx = "1" >O</div>
-                <div class='cell' data-indx = "2" ></div>
-                <div class='cell' data-indx = "3" ></div>
-                <div class='cell' data-indx = "4" ></div>
-                <div class='cell' data-indx = "5" ></div>
-                <div class='cell' data-indx = "6" ></div>
-                <div class='cell' data-indx = "7" ></div>
-                <div class='cell' data-indx = "8" ></div>
-		</div>
-		<div id="start">Start</div>
+	<div class="wrapper">
+	Click on cell!<br><br>
+		<div id="winner"></div>
+		<div id="move">AI's Move</div>
+		<table>
+			<tr>
+				<td><button id="c00"></button></td>
+				<td><button id="c01"></button></td>
+				<td><button id="c02"></button></td>
+			</tr>
+			<tr>
+				<td><button id="c10"></button></td>
+				<td><button id="c11"></button></td>
+				<td><button id="c12"></button></td>
+			</tr>
+			<tr>
+				<td><button id="c20"></button></td>
+				<td><button id="c21"></button></td>
+				<td><button id="c22"></button></td>
+			</tr>
+		</table>
+
+		<input type="button" id="restart" value="Restart Game"/>
 	</div>
-	<script src="js/controls.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+
 </body>
 </html>
