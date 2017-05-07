@@ -28,7 +28,7 @@ function State(oldState) {
 }
 
 State.prototype.advanceTurn = function() {
-	this.turn = "X" ? "O" : "X";
+	this.turn = this.turn === "X" ? "O" : "X";
 	return this.turn;
 };
 
