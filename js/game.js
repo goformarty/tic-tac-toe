@@ -10,5 +10,6 @@ function Game() {
 
     //X plays first
 	this.newState.turn = "X";
+	this.status = "beginning";
 }
 

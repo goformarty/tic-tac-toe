@@ -4,7 +4,6 @@ describe("Game", function() {
 		game = new Game();
 	});
 	it("creates a board and turn", function() {
-		var game = new Game();
 		expect(game.newState.board).toEqual(["E","E","E","E","E","E","E","E","E"]);
 		expect(game.newState.turn).toBe("X");
 	});
@@ -14,6 +13,7 @@ describe("Game", function() {
 	it("enumarates the empty cells and checks if the state is terminal", function() {
 		expect(game.newState.emptyCells()).toEqual([0,1,2,3,4,5,6,7,8]);
 		expect(game.newState.isTerminal()).toBe(false);
+		expect(game.newState.result).toBe("still running");
 	});
 });
 
